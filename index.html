@@ -56,6 +56,74 @@
             animation: spin 10s linear infinite;
         }
 
+        /* Main Header */
+        .main-header {
+            background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            position: relative;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+
+        .main-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.8);
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .website-name {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #FF9933, #138808);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: 2px;
+        }
+
+        .pm-quote {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-style: italic;
+            color: #000080;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .pm-attribution {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .tagline {
+            font-size: clamp(1.1rem, 3vw, 1.8rem);
+            font-weight: bold;
+            color: #FF9933;
+            background: rgba(255,153,51,0.1);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 2px solid #FF9933;
+            display: inline-block;
+            margin-top: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
         @keyframes spin {
             from { transform: translate(-50%, -50%) rotate(0deg); }
             to { transform: translate(-50%, -50%) rotate(360deg); }
@@ -64,7 +132,7 @@
         /* Video Section */
         .video-section {
             background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
-            padding: 8rem 2rem 4rem;
+            padding: 4rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -107,7 +175,7 @@
             position: relative;
             width: 100%;
             height: 0;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             background: #000;
             border-radius: 15px;
             overflow: hidden;
@@ -377,17 +445,22 @@
             z-index: 2;
         }
 
-        .donation-math {
-            text-align: center;
-        }
-
-        .donation-math h3 {
+        .platform-card {
+            padding: 1rem;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
             margin-bottom: 1rem;
         }
 
-        .donation-math p {
-            line-height: 1.6;
+        .platform-card h4 {
+            margin-bottom: 0.5rem;
         }
+
+        .platform-card p {
+            color: #333;
+            font-size: 0.9rem;
+        }
+
         .call-to-action {
             background: linear-gradient(135deg, #138808, #20B2AA);
             color: white;
@@ -484,7 +557,25 @@
             }
 
             .video-section {
-                padding: 6rem 1rem 3rem;
+                padding: 3rem 1rem;
+            }
+
+            .main-header {
+                padding: 2rem 1rem 1.5rem;
+            }
+
+            .website-name {
+                font-size: 2rem;
+                letter-spacing: 1px;
+            }
+
+            .pm-quote {
+                font-size: 0.9rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
             }
         }
     </style>
@@ -499,6 +590,16 @@
         <div class="flag-green"></div>
     </div>
 
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="website-name">STREAMSEVA.COM</h1>
+            <p class="pm-quote">"I urge more youngsters to pursue this. It's my assurance - you won't be disappointed!"</p>
+            <p class="pm-attribution">— Prime Minister Narendra Modi</p>
+            <div class="tagline">You've asked for initiative, we will deliver it</div>
+        </div>
+    </header>
+
     <!-- Video Section -->
     <section class="video-section">
         <div class="video-container">
@@ -506,15 +607,11 @@
             <p class="video-subtitle">The Prime Minister's inspiring message for entrepreneurs and innovators</p>
             
             <div class="video-wrapper">
-                <!-- Replace with your actual video URL -->
-               <iframe 
+                <iframe 
                   src="https://www.youtube.com/embed/eIjIk9K5EH4?start=122&end=180&autoplay=0&rel=0" 
                   allowfullscreen
-                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+                  title="PM Modi's Inspirational Message">
                 </iframe>
-                </div>
-                <!-- Uncomment and add your video URL -->
-                <!-- <iframe src="YOUR_VIDEO_URL_HERE" allowfullscreen></iframe> -->
             </div>
             
             <p style="font-size: 1.1rem; color: #000080; font-weight: 500;">
@@ -614,14 +711,14 @@
                     </div>
                 </div>
 
-               <div class="cta-buttons">
-                <a href="https://www.linkedin.com/in/nikshepkulli/" target="_blank" class="btn btn-primary">
-                    🔗 View LinkedIn Profile
-                </a>
-                <a href="https://github.com/nikshepkulli/streamseva" target="_blank" class="btn" style="background: linear-gradient(45deg, #FF9933, #138808); color: white; border: none;">
-                    🤝 Join My Team
-                </a>
-            </div>
+                <div class="cta-buttons">
+                    <a href="https://www.linkedin.com/in/nikshepkulli/" target="_blank" class="btn btn-primary">
+                        🔗 View LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/nikshepkulli/streamseva" target="_blank" class="btn" style="background: linear-gradient(45deg, #FF9933, #138808); color: white; border: none;">
+                        🤝 Join My Team
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -659,105 +756,125 @@
             <h2 style="font-size: 2.5rem; margin-bottom: 2rem; background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">₹1 Per Citizen = Digital Independence</h2>
             
             <div style="background: rgba(255,255,255,0.95); padding: 3rem; border-radius: 20px; margin: 2rem 0; border-left: 5px solid #FF9933; border-right: 5px solid #138808; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
-                <div class="donation-math">
-                    <h3 style="color: #FF9933; font-size: 2rem; margin-bottom: 2rem;">The Power of Unity</h3>
+                <h3 style="color: #FF9933; font-size: 2rem; margin-bottom: 2rem;">The Power of Unity</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
+                    <div style="background: linear-gradient(135deg, #FF9933, #FFFFFF); padding: 2rem; border-radius: 15px; color: #333;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">₹1</div>
+                        <div>From Each Citizen</div>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #FFFFFF, #138808); padding: 2rem; border-radius: 15px; color: #333;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">1.4B</div>
+                        <div>Indians United</div>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #138808, #FF9933); padding: 2rem; border-radius: 15px; color: white;">
+                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">₹140Cr</div>
+                        <div>Total Fund</div>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1)); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid rgba(255,153,51,0.3);">
+                    <h3 style="color: #FF9933; margin-bottom: 1.5rem; font-size: 1.5rem;">What ₹140 Crores Will Build:</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: left;">
+                        <div class="platform-card">
+                            <h4 style="color: #FF9933;">🎬 StreamSeva</h4>
+                            <p>Video streaming platform for 1.4B users</p>
+                        </div>
+                        <div class="platform-card">
+                            <h4 style="color: #138808;">🔍 Bharat Search</h4>
+                            <p>Our own Google alternative</p>
+                        </div>
+                        <div class="platform-card">
+                            <h4 style="color: #FF9933;">💬 Bharat Chat</h4>
+                            <p>WhatsApp replacement for Indians</p>
+                        </div>
+                        <div class="platform-card">
+                            <h4 style="color: #138808;">📱 Bharat Social</h4>
+                            <p>Facebook alternative built for India</p>
+                        </div>
+                        <div class="platform-card">
+                            <h4 style="color: #FF9933;">💼 Bharat Office</h4>
+                            <p>Microsoft Office Indian alternative</p>
+                        </div>
+                        <div class="platform-card">
+                            <h4 style="color: #138808;">☁️ Bharat Cloud</h4>
+                            <p>Data sovereignty & cloud services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(19,136,8,0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; border-left: 4px solid #138808;">
+                    <h3 style="color: #138808; margin-bottom: 1rem;">🎓 Hiring Strategy: College Students First</h3>
+                    <p style="color: #333; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem;">
+                        <strong>100% of development work will be done by Indian college students.</strong> We will pay competitive salaries while they study, creating jobs and building skills simultaneously.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                        <div>✅ <strong>Fresh Talent:</strong> Innovative thinking</div>
+                        <div>✅ <strong>Fair Pay:</strong> Competitive student wages</div>
+                        <div>✅ <strong>Skill Building:</strong> Real-world experience</div>
+                        <div>✅ <strong>Job Creation:</strong> 10,000+ student positions</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255,215,0,0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid #FFD700;">
+                    <h3 style="color: #FF9933; margin-bottom: 1rem;">🔍 100% Transparency Guarantee</h3>
+                    <div style="color: #333; text-align: left;">
+                        <p style="margin-bottom: 1rem;"><strong>Every rupee will be tracked publicly:</strong></p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>📊 <strong>Live Dashboard:</strong> Real-time fund utilization</li>
+                            <li>📋 <strong>Monthly Reports:</strong> Detailed expense breakdown</li>
+                            <li>🎥 <strong>Video Updates:</strong> Progress demonstrations</li>
+                            <li>📖 <strong>Open Source:</strong> All code publicly available</li>
+                            <li>👥 <strong>Community Oversight:</strong> Citizen monitoring committee</li>
+                            <li>🏛️ <strong>Government Integration:</strong> Full compliance reporting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <h3 style="color: #333; margin-bottom: 2rem; font-size: 1.8rem;">Ready to Invest in Digital India?</h3>
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
+                        Just ₹1 from you + ₹1 from every Indian = Complete digital independence
+                    </p>
                     
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
-                        <div style="background: linear-gradient(135deg, #FF9933, #FFFFFF); padding: 2rem; border-radius: 15px; color: #333;">
-                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">₹1</div>
-                            <div>From Each Citizen</div>
-                        </div>
-                        <div style="background: linear-gradient(135deg, #FFFFFF, #138808); padding: 2rem; border-radius: 15px; color: #333;">
-                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">1.4B</div>
-                            <div>Indians United</div>
-                        </div>
-                        <div style="background: linear-gradient(135deg, #138808, #FF9933); padding: 2rem; border-radius: 15px; color: white;">
-                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">₹140Cr</div>
-                            <div>Total Fund</div>
-                        </div>
-                    </div>
-
-                    <div style="background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1)); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid rgba(255,153,51,0.3);">
-                        <h3 style="color: #FF9933; margin-bottom: 1.5rem; font-size: 1.5rem;">What ₹140 Crores Will Build:</h3>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: left;">
-                            <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                                <h4 style="color: #FF9933; margin-bottom: 0.5rem;">🎬 StreamSeva</h4>
-                                <p style="color: #333; font-size: 0.9rem;">Video streaming platform for 1.4B users</p>
+                    <!-- QR Code Payment Section -->
+                    <div style="background: white; padding: 2rem; border-radius: 20px; margin: 2rem auto; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 3px solid #FF9933;">
+                        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                            <div style="width: 40px; height: 40px; background: #6739b7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
+                                <span style="color: white; font-weight: bold; font-size: 1.2rem;">पे</span>
                             </div>
-                            <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                                <h4 style="color: #138808; margin-bottom: 0.5rem;">🔍 Bharat Search</h4>
-                                <p style="color: #333; font-size: 0.9rem;">Our own Google alternative</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                                <h4 style="color: #FF9933; margin-bottom: 0.5rem;">💬 Bharat Chat</h4>
-                                <p style="color: #333; font-size: 0.9rem;">WhatsApp replacement for Indians</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                                <h4 style="color: #138808; margin-bottom: 0.5rem;">📱 Bharat Social</h4>
-                                <p style="color: #333; font-size: 0.9rem;">Facebook alternative built for India</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                                <h4 style="color: #FF9933; margin-bottom: 0.5rem;">💼 Bharat Office</h4>
-                                <p style="color: #333; font-size: 0.9rem;">Microsoft Office Indian alternative</p>
-                            </div>
-                            <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 10px;">
-                                <h4 style="color: #138808; margin-bottom: 0.5rem;">☁️ Bharat Cloud</h4>
-                                <p style="color: #333; font-size: 0.9rem;">Data sovereignty & cloud services</p>
-                            </div>
+                            <span style="font-size: 1.5rem; font-weight: bold; color: #333;">PhonePe</span>
                         </div>
-                    </div>
-
-                    <div style="background: rgba(19,136,8,0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; border-left: 4px solid #138808;">
-                        <h3 style="color: #138808; margin-bottom: 1rem;">🎓 Hiring Strategy: College Students First</h3>
-                        <p style="color: #333; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem;">
-                            <strong>100% of development work will be done by Indian college students.</strong> We will pay competitive salaries while they study, creating jobs and building skills simultaneously.
-                        </p>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                            <div>✅ <strong>Fresh Talent:</strong> Innovative thinking</div>
-                            <div>✅ <strong>Fair Pay:</strong> Competitive student wages</div>
-                            <div>✅ <strong>Skill Building:</strong> Real-world experience</div>
-                            <div>✅ <strong>Job Creation:</strong> 10,000+ student positions</div>
-                        </div>
-                    </div>
-
-                    <div style="background: rgba(255,215,0,0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid #FFD700;">
-                        <h3 style="color: #FF9933; margin-bottom: 1rem;">🔍 100% Transparency Guarantee</h3>
-                        <div style="color: #333; text-align: left;">
-                            <p style="margin-bottom: 1rem;"><strong>Every rupee will be tracked publicly:</strong></p>
-                            <ul style="list-style: none; padding-left: 0;">
-                                <li>📊 <strong>Live Dashboard:</strong> Real-time fund utilization</li>
-                                <li>📋 <strong>Monthly Reports:</strong> Detailed expense breakdown</li>
-                                <li>🎥 <strong>Video Updates:</strong> Progress demonstrations</li>
-                                <li>📖 <strong>Open Source:</strong> All code publicly available</li>
-                                <li>👥 <strong>Community Oversight:</strong> Citizen monitoring committee</li>
-                                <li>🏛️ <strong>Government Integration:</strong> Full compliance reporting</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div style="text-align: center; margin: 3rem 0;">
-                        <h3 style="color: #333; margin-bottom: 2rem; font-size: 1.8rem;">Ready to Invest in Digital India?</h3>
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
-                            Just ₹1 from you + ₹1 from every Indian = Complete digital independence
-                        </p>
+                        <div style="color: #6739b7; font-weight: bold; font-size: 1.1rem; margin-bottom: 1rem;">ACCEPTED HERE</div>
+                        <div style="color: #333; font-size: 1rem; margin-bottom: 1rem;">Scan & Pay Using PhonePe App</div>
                         
-                        <div class="cta-buttons" style="margin-top: 2rem;">
-                            <a href="#payment" class="btn" style="background: linear-gradient(45deg, #FF9933, #138808); color: white; font-size: 1.2rem; padding: 20px 40px;">
-                                💳 Donate ₹1 Now
-                            </a>
-                            <a href="#transparency" class="btn btn-secondary" style="border-color: #FF9933; color: #FF9933;">
-                                📊 View Transparency Dashboard
-                            </a>
+                        <!-- QR Code Placeholder - Replace with actual QR code image -->
+                        <div style="width: 200px; height: 200px; margin: 1rem auto; background: #f0f0f0; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                            <div style="text-align: center; color: #666;">
+                                <div style="font-size: 3rem; margin-bottom: 0.5rem;">📱</div>
+                                <div style="font-size: 0.9rem;">Upload your<br>PhonePe QR Code<br>image here</div>
+                            </div>
                         </div>
-
-                        <p style="color: #999; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">
-                            * Payment gateway integration coming soon. Early supporters will be notified first.
-                        </p>
+                        
+                        <div style="color: #333; font-weight: bold; font-size: 1rem;">nikshep</div>
+                        <div style="color: #666; font-size: 0.8rem; margin-top: 1rem;">UPI ID: nikshep2@ybl</div>
                     </div>
+                    
+                    <div class="cta-buttons" style="margin-top: 2rem;">
+                        <a href="#transparency" class="btn btn-secondary" style="border-color: #FF9933; color: #FF9933;">
+                            📊 View Transparency Dashboard
+                        </a>
+                    </div>
+
+                    <p style="color: #999; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">
+                        * Scan QR code with any UPI app (PhonePe, Google Pay, Paytm) to donate ₹1
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Call to Action Section -->
     <section class="call-to-action" id="join">
         <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">The Time is NOW</h2>
         <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 2rem;">
@@ -766,7 +883,7 @@
         
         <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; margin: 2rem auto; max-width: 600px; backdrop-filter: blur(10px);">
             <h3 style="margin-bottom: 1rem; color: #FFD700;">Why India Needs StreamSeva?</h3>
-            <ul style="text-align: left; font-size: 1.1rem; line-height: 1.8;">
+            <ul style="text-align: left; font-size: 1.1rem; line-height: 1.8; list-style: none; padding-left: 0;">
                 <li>🎯 <strong>Cultural Relevance:</strong> Built for Indian creators and audiences</li>
                 <li>🛡️ <strong>Data Sovereignty:</strong> Keep Indian data in India</li>
                 <li>💰 <strong>Economic Growth:</strong> Revenue stays in the ecosystem</li>
@@ -798,7 +915,7 @@
             <h3 style="margin-bottom: 1rem; font-size: 2rem;">Ready to Make History?</h3>
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join the movement to build India's digital future under proven leadership</p>
             
-           <div class="cta-buttons">
+            <div class="cta-buttons">
                 <a href="#leadership" class="btn btn-primary">
                     🚀 Meet Your CTO
                 </a>
