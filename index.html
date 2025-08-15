@@ -124,22 +124,6 @@
             border: none;
         }
 
-        .video-placeholder {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #FF9933, #FFFFFF, #138808);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: #000080;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(to bottom, #FF9933 0%, #FF9933 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #138808 66.66%, #138808 100%);
@@ -523,12 +507,11 @@
             
             <div class="video-wrapper">
                 <!-- Replace with your actual video URL -->
-                <div class="video-placeholder">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">▶️</div>
-                    <div>PM Modi's Inspirational Message</div>
-                    <div style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
-                        Click to add your video URL in the iframe below
-                    </div>
+               <iframe 
+                  src="https://www.youtube.com/embed/eIjIk9K5EH4?start=122&end=180&autoplay=0&rel=0" 
+                  allowfullscreen
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+                </iframe>
                 </div>
                 <!-- Uncomment and add your video URL -->
                 <!-- <iframe src="YOUR_VIDEO_URL_HERE" allowfullscreen></iframe> -->
