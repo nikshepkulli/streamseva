@@ -85,7 +85,7 @@
         }
 
         .website-name {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(1.8rem, 8vw, 4.5rem);
             font-weight: bold;
             margin-bottom: 1rem;
             background: linear-gradient(45deg, #FF9933, #138808);
@@ -93,35 +93,39 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            letter-spacing: 2px;
+            letter-spacing: clamp(1px, 2vw, 2px);
+            word-break: break-word;
         }
 
         .pm-quote {
-            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-size: clamp(0.9rem, 3vw, 1.3rem);
             font-style: italic;
             color: #000080;
             margin-bottom: 0.5rem;
             font-weight: 500;
             line-height: 1.4;
+            padding: 0 1rem;
         }
 
         .pm-attribution {
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
             color: #666;
             margin-bottom: 1.5rem;
         }
 
         .tagline {
-            font-size: clamp(1.1rem, 3vw, 1.8rem);
+            font-size: clamp(1rem, 4vw, 1.8rem);
             font-weight: bold;
             color: #FF9933;
             background: rgba(255,153,51,0.1);
-            padding: 1rem 2rem;
+            padding: clamp(0.8rem, 3vw, 1rem) clamp(1rem, 4vw, 2rem);
             border-radius: 50px;
             border: 2px solid #FF9933;
             display: inline-block;
             margin-top: 1rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 90%;
         }
 
         @keyframes spin {
@@ -132,7 +136,7 @@
         /* Video Section */
         .video-section {
             background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -157,7 +161,7 @@
         }
 
         .video-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(1.5rem, 6vw, 3.5rem);
             font-weight: bold;
             margin-bottom: 1rem;
             color: #000080;
@@ -165,10 +169,11 @@
         }
 
         .video-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-size: clamp(0.9rem, 3vw, 1.5rem);
             margin-bottom: 2rem;
             color: #333;
             font-weight: 500;
+            padding: 0 1rem;
         }
 
         .video-wrapper {
@@ -203,6 +208,7 @@
             color: white;
             position: relative;
             overflow: hidden;
+            padding: 2rem 1rem;
         }
 
         .hero::before {
@@ -220,12 +226,13 @@
             position: relative;
             z-index: 2;
             max-width: 1000px;
-            padding: 2rem;
+            padding: clamp(1rem, 4vw, 2rem);
             animation: fadeInUp 1s ease-out;
+            width: 100%;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2rem, 8vw, 4rem);
             font-weight: bold;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -233,33 +240,36 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            word-break: break-word;
         }
 
         .hero h2 {
-            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-size: clamp(1rem, 4vw, 2rem);
             margin-bottom: 2rem;
             font-weight: 300;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            padding: 0 1rem;
         }
 
         .quote-section {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-            padding: 2rem;
+            padding: clamp(1rem, 4vw, 2rem);
             border-radius: 15px;
             margin: 2rem 0;
             border: 1px solid rgba(255,255,255,0.2);
         }
 
         .quote {
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-size: clamp(1rem, 3vw, 1.5rem);
             font-style: italic;
             margin-bottom: 1rem;
             line-height: 1.6;
+            padding: 0 0.5rem;
         }
 
         .quote-author {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             font-weight: bold;
             color: #FFD700;
         }
@@ -268,7 +278,7 @@
         .leadership-section {
             background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
             color: #333;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
             text-align: center;
             position: relative;
         }
@@ -294,7 +304,7 @@
         .leader-profile {
             background: rgba(255,255,255,0.95);
             backdrop-filter: blur(10px);
-            padding: 3rem;
+            padding: clamp(1.5rem, 4vw, 3rem);
             border-radius: 20px;
             margin: 2rem 0;
             border-left: 5px solid #FF9933;
@@ -303,7 +313,7 @@
         }
 
         .leader-name {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
             font-weight: bold;
             margin-bottom: 0.5rem;
             background: linear-gradient(45deg, #FF9933, #138808);
@@ -313,14 +323,14 @@
         }
 
         .leader-title {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             margin-bottom: 2rem;
             color: #666;
         }
 
         .experience-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
@@ -334,7 +344,7 @@
         }
 
         .company-logo {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             font-weight: bold;
             margin-bottom: 0.5rem;
             background: linear-gradient(45deg, #FF9933, #138808);
@@ -352,8 +362,8 @@
         }
 
         .btn {
-            padding: 15px 30px;
-            font-size: 1.1rem;
+            padding: clamp(12px, 3vw, 15px) clamp(20px, 5vw, 30px);
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
             font-weight: bold;
             text-decoration: none;
             border-radius: 50px;
@@ -362,7 +372,11 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
+            text-align: center;
+            min-width: 200px;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -386,14 +400,14 @@
         /* Stats Section */
         .stats-section {
             background: linear-gradient(135deg, #FFFFFF, #F0F8FF);
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
             text-align: center;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: clamp(1rem, 3vw, 2rem);
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -401,7 +415,7 @@
         .stat-card {
             background: linear-gradient(135deg, #FF9933, #138808);
             color: white;
-            padding: 2rem;
+            padding: clamp(1.5rem, 4vw, 2rem);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(255,153,51,0.3);
             transform: perspective(1000px) rotateY(0deg);
@@ -413,7 +427,7 @@
         }
 
         .stat-number {
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw, 3rem);
             font-weight: bold;
             margin-bottom: 0.5rem;
         }
@@ -421,7 +435,7 @@
         /* Donation Section */
         .donation-section {
             background: linear-gradient(135deg, #FF9933, #FFFFFF, #138808);
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -454,17 +468,18 @@
 
         .platform-card h4 {
             margin-bottom: 0.5rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
         }
 
         .platform-card p {
             color: #333;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
         }
 
         .call-to-action {
             background: linear-gradient(135deg, #138808, #20B2AA);
             color: white;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 2rem);
             text-align: center;
         }
 
@@ -484,10 +499,19 @@
             border: 1px solid rgba(255,255,255,0.2);
         }
 
+        .tech-card h4 {
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-card p {
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+        }
+
         .footer {
             background: linear-gradient(135deg, #000080, #4169E1);
             color: white;
-            padding: 2rem;
+            padding: clamp(1.5rem, 4vw, 2rem);
             text-align: center;
         }
 
@@ -513,7 +537,7 @@
         .floating-icon {
             position: absolute;
             color: rgba(255,255,255,0.1);
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
             animation: float 6s ease-in-out infinite;
         }
 
@@ -533,14 +557,16 @@
         .india-badge {
             display: inline-block;
             background: linear-gradient(45deg, #FF9933, #FFFFFF, #138808);
-            padding: 5px 15px;
+            padding: clamp(3px, 2vw, 5px) clamp(10px, 3vw, 15px);
             border-radius: 20px;
             color: #000080;
             font-weight: bold;
             margin: 0 5px;
             border: 2px solid #000080;
+            font-size: clamp(0.8rem, 3vw, 1rem);
         }
 
+        /* Enhanced Mobile Styles */
         @media (max-width: 768px) {
             .hero-content, .leadership-content {
                 padding: 1rem;
@@ -549,33 +575,199 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 0.8rem;
             }
             
             .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
+                min-width: auto;
             }
 
             .video-section {
-                padding: 3rem 1rem;
+                padding: 2rem 1rem;
             }
 
             .main-header {
-                padding: 2rem 1rem 1.5rem;
+                padding: 1.5rem 1rem 1rem;
             }
 
-            .website-name {
-                font-size: 2rem;
-                letter-spacing: 1px;
+            .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .floating-icon {
+                display: none; /* Hide floating icons on mobile for better performance */
+            }
+
+            .quote {
+                padding: 0;
             }
 
             .pm-quote {
-                font-size: 0.9rem;
+                padding: 0 0.5rem;
             }
 
+            .hero h2 {
+                padding: 0 0.5rem;
+            }
+
+            .video-subtitle {
+                padding: 0 0.5rem;
+            }
+
+            /* QR Code Section Mobile Optimization */
+            .qr-code-section {
+                max-width: 300px !important;
+                margin: 1rem auto !important;
+                padding: 1.5rem !important;
+            }
+
+            .qr-code-section img {
+                width: 150px !important;
+                height: 150px !important;
+            }
+
+            /* Grid layouts for mobile */
+            .donation-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .platform-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Text size adjustments for very small screens */
             .tagline {
-                font-size: 1rem;
-                padding: 0.8rem 1.5rem;
+                max-width: 95%;
+                word-break: break-word;
+            }
+
+            .website-name {
+                word-break: break-all;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                min-height: auto;
+                padding: 1rem 0.5rem;
+            }
+
+            .quote-section {
+                margin: 1rem 0;
+                padding: 1rem;
+            }
+
+            .leader-profile {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .experience-card {
+                padding: 1rem;
+            }
+
+            .stat-card {
+                padding: 1rem;
+            }
+
+            .tech-card {
+                padding: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                min-width: auto;
+                width: 100%;
+                max-width: 250px;
+            }
+
+            /* Further reduce font sizes for very small screens */
+            .chakra {
+                width: 4px;
+                height: 4px;
+            }
+
+            .flag-section {
+                height: 6px;
+            }
+        }
+
+        /* Landscape phone orientation */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                min-height: auto;
+                padding: 1rem;
+            }
+
+            .hero-content {
+                padding: 0.5rem;
+            }
+
+            .quote-section {
+                margin: 1rem 0;
+                padding: 1rem;
+            }
+        }
+
+        /* Large screens optimization */
+        @media (min-width: 1400px) {
+            .header-content,
+            .leadership-content,
+            .donation-content {
+                max-width: 1200px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .floating-icons,
+            .chakra,
+            .flag-section {
+                display: none;
+            }
+
+            .hero,
+            .video-section,
+            .leadership-section,
+            .donation-section {
+                break-inside: avoid;
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            .chakra,
+            .floating-icon,
+            .stat-card {
+                animation: none;
+            }
+
+            .btn:hover {
+                transform: none;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .website-name,
+            .leader-name,
+            .highlight {
+                -webkit-text-fill-color: initial;
+                background: none;
+                color: #000080;
             }
         }
     </style>
@@ -614,7 +806,7 @@
                 </iframe>
             </div>
             
-            <p style="font-size: 1.1rem; color: #000080; font-weight: 500;">
+            <p style="font-size: clamp(1rem, 3vw, 1.1rem); color: #000080; font-weight: 500;">
                 "I urge more youngsters to pursue this. It's my assurance - you won't be disappointed!"
             </p>
         </div>
@@ -639,14 +831,14 @@
                     "Over the past nine years, this transformative program has empowered countless youngsters, turning their innovative ideas into successful StartUps. I compliment every youngster in the StartUp world and urge more youngsters to pursue this. It's my assurance - you won't be disappointed!"
                 </div>
                 <div class="quote-author">— Prime Minister Narendra Modi</div>
-                <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                <div style="margin-top: 1rem; font-size: clamp(0.8rem, 2.5vw, 0.9rem); opacity: 0.8;">
                     On 9 Years of Startup India, January 16, 2025
                 </div>
             </div>
 
             <div class="quote-section">
                 <div class="quote">
-                    "This success of Startndia reflects that today's India is dynamic, confident and future-ready. As we mark this journey, we reaffirm our commitment to continue fostering an entrepreneurial ecosystem that uplifts every dream and contributes to Aatmanirbhar Bharat."
+                    "This success of Startup India reflects that today's India is dynamic, confident and future-ready. As we mark this journey, we reaffirm our commitment to continue fostering an entrepreneurial ecosystem that uplifts every dream and contributes to Aatmanirbhar Bharat."
                 </div>
             </div>
             
@@ -664,13 +856,13 @@
     <!-- Leadership Section -->
     <section class="leadership-section" id="leadership">
         <div class="leadership-content">
-            <h2 style="font-size: 2.5rem; margin-bottom: 3rem; background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; z-index: 2;">Proven Leadership for Bharat's Digital Future</h2>
+            <h2 style="font-size: clamp(1.8rem, 6vw, 2.5rem); margin-bottom: 3rem; background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; position: relative; z-index: 2;">Proven Leadership for Bharat's Digital Future</h2>
             
             <div class="leader-profile">
                 <div class="leader-name">Nikshep Kulli</div>
                 <div class="leader-title">Co-Founder & CTO | Proven Technology Leader</div>
                 
-                <p style="font-size: 1.2rem; line-height: 1.6; margin: 2rem 0; color: #555;">
+                <p style="font-size: clamp(1rem, 3vw, 1.2rem); line-height: 1.6; margin: 2rem 0; color: #555;">
                     "I have successfully built and scaled technology platforms that serve millions. 
                     Now, it's time to build something truly <strong style="background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Made in India</strong>, 
                     for India, by Indians. Join me in creating our nation's digital independence."
@@ -700,14 +892,14 @@
                 </div>
 
                 <div style="background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1)); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid rgba(255,153,51,0.3);">
-                    <h3 style="background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem; font-weight: bold;">Why Follow My Leadership?</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left; color: #333;">
-                        <div>✅ <strong>Proven Track Record:</strong> Built platforms serving millions</div>
-                        <div>✅ <strong>Global Experience:</strong> Worked with Fortune 500 companies</div>
-                        <div>✅ <strong>Technical Expertise:</strong> Full-stack development to system architecture</div>
-                        <div>✅ <strong>Startup Success:</strong> Co-founded and scaled Starteryou</div>
-                        <div>✅ <strong>Educational Background:</strong> Teaching next-gen developers</div>
-                        <div>✅ <strong>Vision for India:</strong> Committed to Aatmanirbhar Bharat</div>
+                    <h3 style="background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem; font-weight: bold; font-size: clamp(1.2rem, 4vw, 1.5rem);">Why Follow My Leadership?</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; text-align: left; color: #333;">
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Proven Track Record:</strong> Built platforms serving millions</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Global Experience:</strong> Worked with Fortune 500 companies</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Technical Expertise:</strong> Full-stack development to system architecture</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Startup Success:</strong> Co-founded and scaled Starteryou</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Educational Background:</strong> Teaching next-gen developers</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Vision for India:</strong> Committed to Aatmanirbhar Bharat</div>
                     </div>
                 </div>
 
@@ -725,27 +917,27 @@
 
     <!-- Stats Section -->
     <section class="stats-section" id="learn">
-        <h2 style="font-size: 2.5rem; margin-bottom: 3rem; color: #333;">Startup India's Success Story</h2>
+        <h2 style="font-size: clamp(1.8rem, 6vw, 2.5rem); margin-bottom: 3rem; color: #333;">Startup India's Success Story</h2>
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="stat-number">16.6L+</div>
-                <div>Direct Jobs Created</div>
-                <div style="font-size: 0.9rem; margin-top: 0.5rem;">by recognized startups since 2016</div>
+                <div style="font-size: clamp(1rem, 3vw, 1.2rem);">Direct Jobs Created</div>
+                <div style="font-size: clamp(0.8rem, 2.5vw, 0.9rem); margin-top: 0.5rem;">by recognized startups since 2016</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">600+</div>
-                <div>Districts Reached</div>
-                <div style="font-size: 0.9rem; margin-top: 0.5rem;">Beyond metro cities</div>
+                <div style="font-size: clamp(1rem, 3vw, 1.2rem);">Districts Reached</div>
+                <div style="font-size: clamp(0.8rem, 2.5vw, 0.9rem); margin-top: 0.5rem;">Beyond metro cities</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">9</div>
-                <div>Years Strong</div>
-                <div style="font-size: 0.9rem; margin-top: 0.5rem;">Startup India Mission</div>
+                <div style="font-size: clamp(1rem, 3vw, 1.2rem);">Years Strong</div>
+                <div style="font-size: clamp(0.8rem, 2.5vw, 0.9rem); margin-top: 0.5rem;">Startup India Mission</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">1.6Cr+</div>
-                <div>Youth Trained</div>
-                <div style="font-size: 0.9rem; margin-top: 0.5rem;">Under PMKVY alone</div>
+                <div style="font-size: clamp(1rem, 3vw, 1.2rem);">Youth Trained</div>
+                <div style="font-size: clamp(0.8rem, 2.5vw, 0.9rem); margin-top: 0.5rem;">Under PMKVY alone</div>
             </div>
         </div>
     </section>
@@ -753,29 +945,29 @@
     <!-- Donation Section -->
     <section class="donation-section" id="donate">
         <div class="donation-content">
-            <h2 style="font-size: 2.5rem; margin-bottom: 2rem; background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">₹1 Per Citizen = Digital Independence</h2>
+            <h2 style="font-size: clamp(1.8rem, 6vw, 2.5rem); margin-bottom: 2rem; background: linear-gradient(45deg, #FF9933, #138808); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">₹1 Per Citizen = Digital Independence</h2>
             
-            <div style="background: rgba(255,255,255,0.95); padding: 3rem; border-radius: 20px; margin: 2rem 0; border-left: 5px solid #FF9933; border-right: 5px solid #138808; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
-                <h3 style="color: #FF9933; font-size: 2rem; margin-bottom: 2rem;">The Power of Unity</h3>
+            <div style="background: rgba(255,255,255,0.95); padding: clamp(2rem, 4vw, 3rem); border-radius: 20px; margin: 2rem 0; border-left: 5px solid #FF9933; border-right: 5px solid #138808; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+                <h3 style="color: #FF9933; font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 2rem;">The Power of Unity</h3>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; text-align: center;">
-                    <div style="background: linear-gradient(135deg, #FF9933, #FFFFFF); padding: 2rem; border-radius: 15px; color: #333;">
-                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">₹1</div>
-                        <div>From Each Citizen</div>
+                <div class="donation-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(1rem, 3vw, 2rem); margin: 2rem 0; text-align: center;">
+                    <div style="background: linear-gradient(135deg, #FF9933, #FFFFFF); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; color: #333;">
+                        <div style="font-size: clamp(2rem, 6vw, 2.5rem); font-weight: bold; margin-bottom: 0.5rem;">₹1</div>
+                        <div style="font-size: clamp(0.9rem, 3vw, 1rem);">From Each Citizen</div>
                     </div>
-                    <div style="background: linear-gradient(135deg, #FFFFFF, #138808); padding: 2rem; border-radius: 15px; color: #333;">
-                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">1.4B</div>
-                        <div>Indians United</div>
+                    <div style="background: linear-gradient(135deg, #FFFFFF, #138808); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; color: #333;">
+                        <div style="font-size: clamp(2rem, 6vw, 2.5rem); font-weight: bold; margin-bottom: 0.5rem;">1.4B</div>
+                        <div style="font-size: clamp(0.9rem, 3vw, 1rem);">Indians United</div>
                     </div>
-                    <div style="background: linear-gradient(135deg, #138808, #FF9933); padding: 2rem; border-radius: 15px; color: white;">
-                        <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">₹140Cr</div>
-                        <div>Total Fund</div>
+                    <div style="background: linear-gradient(135deg, #138808, #FF9933); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; color: white;">
+                        <div style="font-size: clamp(2rem, 6vw, 2.5rem); font-weight: bold; margin-bottom: 0.5rem;">₹140Cr</div>
+                        <div style="font-size: clamp(0.9rem, 3vw, 1rem);">Total Fund</div>
                     </div>
                 </div>
 
-                <div style="background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1)); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid rgba(255,153,51,0.3);">
-                    <h3 style="color: #FF9933; margin-bottom: 1.5rem; font-size: 1.5rem;">What ₹140 Crores Will Build:</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: left;">
+                <div style="background: linear-gradient(135deg, rgba(255,153,51,0.1), rgba(19,136,8,0.1)); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; margin: 2rem 0; border: 2px solid rgba(255,153,51,0.3);">
+                    <h3 style="color: #FF9933; margin-bottom: 1.5rem; font-size: clamp(1.2rem, 4vw, 1.5rem);">What ₹140 Crores Will Build:</h3>
+                    <div class="platform-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: left;">
                         <div class="platform-card">
                             <h4 style="color: #FF9933;">🎬 StreamSeva</h4>
                             <p>Video streaming platform for 1.4B users</p>
@@ -803,56 +995,56 @@
                     </div>
                 </div>
 
-                <div style="background: rgba(19,136,8,0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; border-left: 4px solid #138808;">
-                    <h3 style="color: #138808; margin-bottom: 1rem;">🎓 Hiring Strategy: College Students First</h3>
-                    <p style="color: #333; font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem;">
+                <div style="background: rgba(19,136,8,0.1); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; margin: 2rem 0; border-left: 4px solid #138808;">
+                    <h3 style="color: #138808; margin-bottom: 1rem; font-size: clamp(1.2rem, 4vw, 1.5rem);">🎓 Hiring Strategy: College Students First</h3>
+                    <p style="color: #333; font-size: clamp(1rem, 3vw, 1.1rem); line-height: 1.6; margin-bottom: 1rem;">
                         <strong>100% of development work will be done by Indian college students.</strong> We will pay competitive salaries while they study, creating jobs and building skills simultaneously.
                     </p>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
-                        <div>✅ <strong>Fresh Talent:</strong> Innovative thinking</div>
-                        <div>✅ <strong>Fair Pay:</strong> Competitive student wages</div>
-                        <div>✅ <strong>Skill Building:</strong> Real-world experience</div>
-                        <div>✅ <strong>Job Creation:</strong> 10,000+ student positions</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Fresh Talent:</strong> Innovative thinking</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Fair Pay:</strong> Competitive student wages</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Skill Building:</strong> Real-world experience</div>
+                        <div style="font-size: clamp(0.9rem, 2.5vw, 1rem);">✅ <strong>Job Creation:</strong> 10,000+ student positions</div>
                     </div>
                 </div>
 
-                <div style="background: rgba(255,215,0,0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0; border: 2px solid #FFD700;">
-                    <h3 style="color: #FF9933; margin-bottom: 1rem;">🔍 100% Transparency Guarantee</h3>
+                <div style="background: rgba(255,215,0,0.1); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; margin: 2rem 0; border: 2px solid #FFD700;">
+                    <h3 style="color: #FF9933; margin-bottom: 1rem; font-size: clamp(1.2rem, 4vw, 1.5rem);">🔍 100% Transparency Guarantee</h3>
                     <div style="color: #333; text-align: left;">
-                        <p style="margin-bottom: 1rem;"><strong>Every rupee will be tracked publicly:</strong></p>
+                        <p style="margin-bottom: 1rem; font-size: clamp(0.9rem, 3vw, 1rem);"><strong>Every rupee will be tracked publicly:</strong></p>
                         <ul style="list-style: none; padding-left: 0;">
-                            <li>📊 <strong>Live Dashboard:</strong> Real-time fund utilization</li>
-                            <li>📋 <strong>Monthly Reports:</strong> Detailed expense breakdown</li>
-                            <li>🎥 <strong>Video Updates:</strong> Progress demonstrations</li>
-                            <li>📖 <strong>Open Source:</strong> All code publicly available</li>
-                            <li>👥 <strong>Community Oversight:</strong> Citizen monitoring committee</li>
-                            <li>🏛️ <strong>Government Integration:</strong> Full compliance reporting</li>
+                            <li style="font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 0.5rem;">📊 <strong>Live Dashboard:</strong> Real-time fund utilization</li>
+                            <li style="font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 0.5rem;">📋 <strong>Monthly Reports:</strong> Detailed expense breakdown</li>
+                            <li style="font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 0.5rem;">🎥 <strong>Video Updates:</strong> Progress demonstrations</li>
+                            <li style="font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 0.5rem;">📖 <strong>Open Source:</strong> All code publicly available</li>
+                            <li style="font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 0.5rem;">👥 <strong>Community Oversight:</strong> Citizen monitoring committee</li>
+                            <li style="font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 0.5rem;">🏛️ <strong>Government Integration:</strong> Full compliance reporting</li>
                         </ul>
                     </div>
                 </div>
 
                 <div style="text-align: center; margin: 3rem 0;">
-                    <h3 style="color: #333; margin-bottom: 2rem; font-size: 1.8rem;">Ready to Invest in Digital India?</h3>
-                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
+                    <h3 style="color: #333; margin-bottom: 2rem; font-size: clamp(1.4rem, 5vw, 1.8rem);">Ready to Invest in Digital India?</h3>
+                    <p style="color: #666; font-size: clamp(1rem, 3vw, 1.1rem); margin-bottom: 2rem;">
                         Just ₹1 from you + ₹1 from every Indian = Complete digital independence
                     </p>
                     
                     <!-- QR Code Payment Section -->
-                    <div style="background: white; padding: 2rem; border-radius: 20px; margin: 2rem auto; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 3px solid #FF9933;">
+                    <div class="qr-code-section" style="background: white; padding: 2rem; border-radius: 20px; margin: 2rem auto; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 3px solid #FF9933;">
                         <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
                             <div style="width: 40px; height: 40px; background: #6739b7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px;">
                                 <span style="color: white; font-weight: bold; font-size: 1.2rem;">पे</span>
                             </div>
-                            <span style="font-size: 1.5rem; font-weight: bold; color: #333;">PhonePe</span>
+                            <span style="font-size: clamp(1.2rem, 4vw, 1.5rem); font-weight: bold; color: #333;">PhonePe</span>
                         </div>
-                        <div style="color: #6739b7; font-weight: bold; font-size: 1.1rem; margin-bottom: 1rem;">ACCEPTED HERE</div>
-                        <div style="color: #333; font-size: 1rem; margin-bottom: 1rem;">Scan & Pay Using PhonePe App</div>
+                        <div style="color: #6739b7; font-weight: bold; font-size: clamp(1rem, 3vw, 1.1rem); margin-bottom: 1rem;">ACCEPTED HERE</div>
+                        <div style="color: #333; font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 1rem;">Scan & Pay Using PhonePe App</div>
                         
                         <!-- QR Code -->
-                        <img src="Myupi.jpg" alt="PhonePe QR Code - Scan to donate ₹1" style="width: 200px; height: 200px; border-radius: 10px; border: 2px solid #e0e0e0;">
+                        <img src="Myupi.jpg" alt="PhonePe QR Code - Scan to donate ₹1" style="width: 200px; height: 200px; border-radius: 10px; border: 2px solid #e0e0e0; max-width: 100%;">
                         
-                        <div style="color: #333; font-weight: bold; font-size: 1rem;">nikshep</div>
-                        <div style="color: #666; font-size: 0.8rem; margin-top: 1rem;">UPI ID: nikshep2@ybl</div>
+                        <div style="color: #333; font-weight: bold; font-size: clamp(0.9rem, 3vw, 1rem);">nikshep</div>
+                        <div style="color: #666; font-size: clamp(0.7rem, 2.5vw, 0.8rem); margin-top: 1rem;">UPI ID: nikshep2@ybl</div>
                     </div>
                     
                     <div class="cta-buttons" style="margin-top: 2rem;">
@@ -861,7 +1053,7 @@
                         </a>
                     </div>
 
-                    <p style="color: #999; font-size: 0.9rem; margin-top: 1rem; font-style: italic;">
+                    <p style="color: #999; font-size: clamp(0.8rem, 2.5vw, 0.9rem); margin-top: 1rem; font-style: italic;">
                         * Scan QR code with any UPI app (PhonePe, Google Pay, Paytm) to donate ₹1
                     </p>
                 </div>
@@ -871,19 +1063,19 @@
 
     <!-- Call to Action Section -->
     <section class="call-to-action" id="join">
-        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">The Time is NOW</h2>
-        <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 2rem;">
+        <h2 style="font-size: clamp(1.8rem, 6vw, 2.5rem); margin-bottom: 2rem;">The Time is NOW</h2>
+        <p style="font-size: clamp(1rem, 4vw, 1.3rem); max-width: 800px; margin: 0 auto 2rem; padding: 0 1rem;">
             While the world uses foreign platforms, <strong>Indian developers</strong> have the talent, creativity, and determination to build our own digital infrastructure. PM Modi has called us to action - let's answer that call with <span class="india-badge">proven leadership</span>!
         </p>
         
-        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; margin: 2rem auto; max-width: 600px; backdrop-filter: blur(10px);">
-            <h3 style="margin-bottom: 1rem; color: #FFD700;">Why India Needs StreamSeva?</h3>
-            <ul style="text-align: left; font-size: 1.1rem; line-height: 1.8; list-style: none; padding-left: 0;">
-                <li>🎯 <strong>Cultural Relevance:</strong> Built for Indian creators and audiences</li>
-                <li>🛡️ <strong>Data Sovereignty:</strong> Keep Indian data in India</li>
-                <li>💰 <strong>Economic Growth:</strong> Revenue stays in the ecosystem</li>
-                <li>🌐 <strong>Local Languages:</strong> True multilingual support</li>
-                <li>🚀 <strong>Innovation Hub:</strong> Showcase Indian tech prowess</li>
+        <div style="background: rgba(255,255,255,0.1); padding: clamp(1.5rem, 4vw, 2rem); border-radius: 15px; margin: 2rem auto; max-width: 600px; backdrop-filter: blur(10px);">
+            <h3 style="margin-bottom: 1rem; color: #FFD700; font-size: clamp(1.2rem, 4vw, 1.5rem);">Why India Needs StreamSeva?</h3>
+            <ul style="text-align: left; font-size: clamp(0.9rem, 3vw, 1.1rem); line-height: 1.8; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 0.5rem;">🎯 <strong>Cultural Relevance:</strong> Built for Indian creators and audiences</li>
+                <li style="margin-bottom: 0.5rem;">🛡️ <strong>Data Sovereignty:</strong> Keep Indian data in India</li>
+                <li style="margin-bottom: 0.5rem;">💰 <strong>Economic Growth:</strong> Revenue stays in the ecosystem</li>
+                <li style="margin-bottom: 0.5rem;">🌐 <strong>Local Languages:</strong> True multilingual support</li>
+                <li style="margin-bottom: 0.5rem;">🚀 <strong>Innovation Hub:</strong> Showcase Indian tech prowess</li>
             </ul>
         </div>
 
@@ -907,8 +1099,8 @@
         </div>
 
         <div style="margin-top: 3rem;">
-            <h3 style="margin-bottom: 1rem; font-size: 2rem;">Ready to Make History?</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Join the movement to build India's digital future under proven leadership</p>
+            <h3 style="margin-bottom: 1rem; font-size: clamp(1.5rem, 5vw, 2rem);">Ready to Make History?</h3>
+            <p style="font-size: clamp(1rem, 3vw, 1.2rem); margin-bottom: 2rem; padding: 0 1rem;">Join the movement to build India's digital future under proven leadership</p>
             
             <div class="cta-buttons">
                 <a href="#leadership" class="btn btn-primary">
@@ -924,11 +1116,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div style="max-width: 800px; margin: 0 auto;">
-            <h3 style="margin-bottom: 1rem;">🇮🇳 Jai Hind! Let's Build the Future Together 🇮🇳</h3>
-            <p>This is a grassroots initiative inspired by PM Modi's vision for an innovative, self-reliant India. Led by proven technology leadership with experience building platforms that serve millions. Every great journey begins with a single step - take yours today.</p>
+            <h3 style="margin-bottom: 1rem; font-size: clamp(1.2rem, 4vw, 1.5rem);">🇮🇳 Jai Hind! Let's Build the Future Together 🇮🇳</h3>
+            <p style="font-size: clamp(0.9rem, 3vw, 1rem); line-height: 1.6;">This is a grassroots initiative inspired by PM Modi's vision for an innovative, self-reliant India. Led by proven technology leadership with experience building platforms that serve millions. Every great journey begins with a single step - take yours today.</p>
             <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.3);">
-                <p>&copy; 2025 Build StreamSeva Initiative | Made with ❤️ for India by Nikshep Kulli</p>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                <p style="font-size: clamp(0.8rem, 2.5vw, 0.9rem);">&copy; 2025 Build StreamSeva Initiative | Made with ❤️ for India by Nikshep Kulli</p>
+                <p style="margin-top: 1rem; font-size: clamp(0.7rem, 2vw, 0.8rem); opacity: 0.8;">
                     Inspired by PM Modi's Startup India Mission | Co-Founder & CTO at Starteryou
                 </p>
             </div>
@@ -994,16 +1186,72 @@
             }
         });
 
-        // Parallax effect for floating icons
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const floatingIcons = document.querySelectorAll('.floating-icon');
-            
-            floatingIcons.forEach((icon, index) => {
-                const speed = 0.5 + (index * 0.1);
-                icon.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+        // Parallax effect for floating icons (only on larger screens)
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const floatingIcons = document.querySelectorAll('.floating-icon');
+                
+                floatingIcons.forEach((icon, index) => {
+                    const speed = 0.5 + (index * 0.1);
+                    icon.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+                });
             });
-        });
+        }
+
+        // Responsive navigation handling
+        function handleResize() {
+            const width = window.innerWidth;
+            
+            // Adjust button layout on very small screens
+            if (width < 480) {
+                document.querySelectorAll('.cta-buttons').forEach(container => {
+                    container.style.flexDirection = 'column';
+                    container.style.alignItems = 'center';
+                });
+            } else {
+                document.querySelectorAll('.cta-buttons').forEach(container => {
+                    container.style.flexDirection = 'row';
+                    container.style.justifyContent = 'center';
+                });
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
+
+        // Touch-friendly interactions for mobile
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                btn.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        // Optimize performance on mobile
+        if (window.innerWidth <= 768) {
+            // Reduce animation complexity on mobile
+            document.querySelectorAll('.floating-icon').forEach(icon => {
+                icon.style.display = 'none';
+            });
+            
+            // Simplify hover effects on touch devices
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.style.transform = 'none';
+                card.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(1.02)';
+                });
+                card.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        }
     </script>
 </body>
 </html>
