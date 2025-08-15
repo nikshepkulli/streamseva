@@ -88,7 +88,7 @@ This project is directly inspired by PM Modi's recent statements on the 9th anni
 
 **Ready to make history?** 
 
-- 📧 **Email**: nikshep@starteryou.com
+- 📧 **Email**: nikshep.kulli@starteryou.com
 - 🔗 **LinkedIn**: [linkedin.com/in/nikshepkulli](https://linkedin.com/in/nikshepkulli)
 - 🌐 **Website**: [streamseva.com]
 - 💳 **Donate**: ₹1 per citizen initiative (payment gateway integrating)
